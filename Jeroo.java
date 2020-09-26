@@ -34,9 +34,10 @@ public class Jeroo extends JerooBase {
           plant();
           turn(RIGHT);
         }
-        while(!isWater(AHEAD)) 
+        while(!isWater(AHEAD)) {
           hop();  
-        turn(LEFT);
+          turn(LEFT);
+        }
         if (!isWater(AHEAD))
           hop();
           turn(RIGHT);
