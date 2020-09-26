@@ -25,12 +25,10 @@ public class Jeroo extends JerooBase {
       while (!isWater(AHEAD))
         hop();
       plant();  
-      turn(RIGHT);
-      turn(RIGHT);
-      while (!isWater(AHEAD))
-        hop();
       turn(LEFT);
-    }
+       while (!isWater(AHEAD))
+        hop();
+        
       public void plantShores() { 
         while(!isWater(AHEAD)) 
           hop();
