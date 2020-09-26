@@ -19,7 +19,12 @@ public class Jeroo extends JerooBase {
       plantShores();
       plantShores();
       plantShores();
-      plantShores();      
+      plantShores(); 
+      plantShores();
+      plantShores();
+      plantShores();
+      plantShores();
+      plantShores();     
     }
       public void plantShores() { 
         while(!isWater(AHEAD)) 
@@ -27,24 +32,18 @@ public class Jeroo extends JerooBase {
         turn(RIGHT);
         if (isWater(LEFT)){
           plant();
-          hop();
-          plant();
+          turn(RIGHT);
         }
-        turn(RIGHT);
         while(!isWater(AHEAD)) 
           hop();  
         turn(LEFT);
+        if (!isWater(AHEAD))
+          hop();
+          turn(RIGHT);
         if (isWater(RIGHT)){
           plant();
-          if (isWater(AHEAD)){
-            turn(LEFT);
-            turn(LEFT);
-          } else {
-          hop();
-          plant();
+          turn(LEFT);
           }
-        }
-        turn(LEFT); 
       } 
     
 
