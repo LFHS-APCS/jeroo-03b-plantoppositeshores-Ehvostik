@@ -14,8 +14,41 @@ public class Jeroo extends JerooBase {
      * between shores.
      */
     public void plantOppositeShores() {
-
+      plant();
+      plantShores();
+      plantShores();
+      plantShores();
+      plantShores();
+      plantShores();
+      plantShores();
+      plantShores();
+      plantShores();
+      plantShores();
     }
+      public void plantShores() { 
+        while(!isWater(AHEAD)) 
+          hop();
+        turn(RIGHT);
+        if (isWater(LEFT)){
+          plant();
+          hop();
+          plant();
+        }
+        turn(RIGHT);
+        while(!isWater(AHEAD)) 
+          hop();  
+        turn(LEFT);
+        if (isWater(RIGHT)){
+          plant();
+          hop();
+          plant();
+        }
+        turn(LEFT);
+        while (isWater(AHEAD)){
+          turn(LEFT);
+        } 
+      } 
+    
 
 
     // Do NOT touch the code below here
